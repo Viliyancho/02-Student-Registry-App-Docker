@@ -6,6 +6,11 @@ pipeline {
                 bat 'npm install'
             }
         }
+        stage('Install dependencies') {
+            steps {
+                bat 'npm start'
+            }
+        }
         stage('Run security tests') { 
             steps {
                 bat 'npm audit' 
